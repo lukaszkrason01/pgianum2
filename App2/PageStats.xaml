@@ -1,0 +1,52 @@
+﻿<Page
+    x:Class="App2.PageStats"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App2"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Charting="using:WinRTXamlToolkit.Controls.DataVisualization.Charting"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Loaded="Grid_Loaded">
+        <TextBlock Text="Wykresy Zużycia prądu" HorizontalAlignment="Center" Margin="0,50,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Charting:Chart x:Name="ColumnChart" HorizontalAlignment="Center" VerticalAlignment="Top" Width="350" Height="300" Margin="0,20,0,0">
+            <Charting:ColumnSeries Title="I" Margin="0" IndependentValuePath="Day"  DependentValuePath="Value" IsSelectionEnabled="False"/>
+        </Charting:Chart>
+        <Charting:Chart x:Name="BarChart" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="350" Height="300">
+            <Charting:BarSeries Title="II" Margin="0" IndependentValuePath="Day" DependentValuePath="Value" IsSelectionEnabled="False"/>
+            <Charting:Chart.Palette>
+                <Charting:ResourceDictionaryCollection>
+                    <ResourceDictionary>
+                        <SolidColorBrush
+                             x:Key="Background"
+                             Color="#e00700" />
+                                        <Style
+                             x:Key="DataPointStyle"
+                             TargetType="Control">
+                                        <Setter
+                             Property="Background"
+                             Value="{StaticResource Background}" />
+                                    </Style>
+                                    <Style
+                             x:Key="DataShapeStyle"
+                             TargetType="Shape">
+                                        <Setter
+                             Property="Stroke"
+                             Value="{StaticResource Background}" />
+                                        <Setter
+                             Property="StrokeThickness"
+                             Value="2" />
+                                        <Setter
+                             Property="StrokeMiterLimit"
+                             Value="1" />
+                                        <Setter
+                             Property="Fill"
+                             Value="{StaticResource Background}" />
+                        </Style>
+                    </ResourceDictionary>
+                </Charting:ResourceDictionaryCollection>
+            </Charting:Chart.Palette>
+        </Charting:Chart>
+    </Grid>
+</Page>

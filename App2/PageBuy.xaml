@@ -1,0 +1,62 @@
+﻿<Page
+    x:Class="App2.PageBuy"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App2"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <RelativePanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <StackPanel>
+                <StackPanel VerticalAlignment="Center">
+                    <TextBlock Text="Wczytaj dane z wykazu"
+                               FontSize="20"
+                               HorizontalAlignment="Center"/>
+                    <Button Content="Wczytaj"
+                        HorizontalAlignment="Center"
+                        Margin="20" Click="Button_Click"/>
+                </StackPanel>
+                <StackPanel>
+                    <TextBlock Text="Bądź spisz dane z licznika"
+                               HorizontalAlignment="Center"
+                               FontSize="20"
+                               />
+                </StackPanel>
+                <Grid Margin="0,20,0,0">
+                    <TextBlock Text="Pierwsza taryfa"
+                               VerticalAlignment="Center"/>
+                    <TextBox x:Name="t1" 
+                        Width="80"
+                             Margin="80,0,0,0"
+                             />
+                    <TextBlock Text="kW"
+                               Margin="200,0,0,0"
+                               VerticalAlignment="Center"/>
+                </Grid>
+                <Grid Margin="0,20,0,0">
+                    <TextBlock Text="Druga taryfa"
+                               VerticalAlignment="Center"/>
+                    <TextBox x:Name="t2"
+                        Width="80"
+                             Margin="80,0,0,0"
+                             />
+                    <TextBlock Text="kW"
+                               Margin="200,0,0,0"
+                               VerticalAlignment="Center"/>
+                </Grid>
+                <CheckBox x:Name="Oplaty"
+                    Margin="0,10,0,0" Content="Pierwszy zakup w tym miesiącu"/>
+                <StackPanel Margin="0,30,0,0">
+                    <TextBlock Text="Wpisz na ile dni chcesz kupić prąd"/>
+                    <TextBox x:Name="dni"
+                        Width="100"
+                             Margin="10"/>
+                    <Button Content="Wylicz"
+                            HorizontalAlignment="Center" Click="Button_Click_1"/>
+                </StackPanel>
+            </StackPanel>  
+         </RelativePanel>
+    </Grid>
+</Page>

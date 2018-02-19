@@ -1,0 +1,66 @@
+﻿<Page
+    x:Class="App2.PageAdd"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App2"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <RelativePanel HorizontalAlignment="Center">
+            <StackPanel Margin="0,100,0,0">
+                <StackPanel>
+                    <TextBlock x:Name="test"
+                        Text="Spisz dane z licznika"
+                               HorizontalAlignment="Center"
+                               Margin="-20,0,0,20"
+                               FontSize="24"/>
+                </StackPanel>
+                <Grid Width="300">
+                    <TextBlock
+                        HorizontalAlignment="Left"
+                        Margin="10,5,0,5"
+                        Text="Pierwsza Taryfa" Height="24"/>
+                    <TextBox x:Name="i"
+                        Margin="100,5,0,5" 
+                             Width='100'/>
+                    <TextBlock 
+                        VerticalAlignment="Center"
+                        Margin="260,0,0,0"
+                        Text="kW"/>
+                </Grid>
+                <Grid Width="300">
+                    <TextBlock Width="120"
+                        HorizontalAlignment="Left"
+                        Margin="10,10,0,5"
+                        Text="Druga Taryfa"/>
+                    <TextBox x:Name="ii"
+                        Width="100"
+                             Margin="100,5,0,5"
+                        />
+                    <TextBlock
+                        VerticalAlignment="Center"
+                        Margin="260,0,0,0"
+                        Text="kW"/>
+                </Grid>
+                <Grid Width="300">
+                    <TextBlock Width="120"
+                        HorizontalAlignment="Left"
+                        Margin="10,10,0,5"
+                        Text="Data"/>
+                    <CalendarDatePicker 
+                        x:Name="date"
+                        Width="150"
+                             Margin="100,5,0,5"/>
+                </Grid>
+                <Button HorizontalAlignment="Center"
+                        Margin="0,50,0,0"
+                    Content="Dodaj wpis" Click="Button_Click"/>
+            </StackPanel>
+
+          
+        </RelativePanel>
+
+    </Grid>
+</Page>

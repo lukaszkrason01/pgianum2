@@ -1,0 +1,119 @@
+﻿<Page
+    x:Class="App2.PageOptions"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App2"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <RelativePanel HorizontalAlignment="Left">
+            
+            <StackPanel Margin="20,60,0,0">
+                <TextBlock x:ConnectionId='1' x:Name="test"
+                    Text="Wpisz moc licznika"
+                           FontSize="20"/>
+                <Grid Width="150" HorizontalAlignment="Left">
+                    <TextBlock
+                        Text="Moc licznika"
+                        Margin="0,0,65,0"
+                               VerticalAlignment="Center"/>
+                    <TextBox x:ConnectionId='13' x:Name="moc" 
+                        Width="20"
+                             HorizontalAlignment="Right"/>
+                </Grid>
+                <TextBlock Text="Czy obowiązuję opłata handlowa?"
+                           Margin="0,10,0,0"
+                           FontSize="20"/>
+                <CheckBox x:ConnectionId='2' x:Name="oplata"
+                                              
+                          Content="Opłata handlowa" IsChecked="False" IsThreeState="True"/>
+                <TextBlock Text="Zmień ceny netto" 
+                           FontSize="24"
+                           Margin="0,10,0,0"/>
+                <Grid x:ConnectionId='3' x:Name="toHide">
+                    <TextBlock Text="Opłata handlowa" HorizontalAlignment="Left"
+                               VerticalAlignment="Center"/>
+                    <TextBox x:ConnectionId='12' x:Name="cOplataH"
+                        Width="30"
+                             Margin="100,0,0,0"/>
+                    <TextBlock Text="zł" VerticalAlignment="Center" Margin="240,0,0,0"/>
+                </Grid>
+                <Grid>
+                    <TextBlock Text="Dystrybucja Stała" 
+                               VerticalAlignment="Center"/>
+                    <TextBox x:ConnectionId='11' x:Name="cDysS"
+                        Width="30"
+                              Margin="100,0,0,0"/>
+                    <TextBlock Text="zł" VerticalAlignment="Center" Margin="240,0,0,0"/>
+                </Grid>
+                <Grid>
+                    <TextBlock Text="Dystrybucja przejściowa" 
+                               VerticalAlignment="Center"/>
+                    <TextBox x:ConnectionId='10' x:Name="cDysP"
+                        Width="30"
+                              Margin="100,0,0,0"/>
+                    <TextBlock Text="zł" VerticalAlignment="Center" Margin="240,0,0,0"/>
+                </Grid>
+                <Grid>
+                    <TextBlock Text="Opłata abonamentowa" 
+                               VerticalAlignment="Center"/>
+                    <TextBox x:ConnectionId='9' x:Name="coplaA"
+                        Width="30"
+                              Margin="100,0,0,0"/>
+                    <TextBlock Text="zł" VerticalAlignment="Center" Margin="240,0,0,0"/>
+                </Grid>
+                <Grid>
+                    <TextBlock Text="Opłata OZE" 
+                               VerticalAlignment="Center"/>
+                    <TextBox x:ConnectionId='8' x:Name="cOZE"
+                        Width="30"
+                              Margin="100,0,0,0"/>
+                    <TextBlock Text="zł" VerticalAlignment="Center" Margin="240,0,0,0"/>
+                </Grid>
+                <StackPanel Margin="0,20,0,0">
+                    <TextBlock Text="Taryfa pierwsza"
+                               FontSize="18"/>
+                    <Grid>
+                        <TextBlock Text="Cena 1kW energii" 
+                               VerticalAlignment="Center"/>
+                        <TextBox x:ConnectionId='7' x:Name="cIc"
+                            Width="30"
+                              Margin="100,0,0,0"/>
+                        <TextBlock Text="zł" VerticalAlignment="Center" Margin="240,0,0,0"/>
+                    </Grid>
+                    <Grid>
+                        <TextBlock Text="Przesył 1kW energii" 
+                               VerticalAlignment="Center"/>
+                        <TextBox x:ConnectionId='6' x:Name="cIp"
+                            Width="30"
+                              Margin="100,0,0,0"/>
+                        <TextBlock Text="zł" VerticalAlignment="Center" Margin="240,0,0,0"/>
+                    </Grid>
+                </StackPanel>
+                <StackPanel>
+                    <TextBlock Text="Taryfa druga"
+                               FontSize="18"/>
+                    <Grid>
+                        <TextBlock Text="Cena 1kW energii" 
+                               VerticalAlignment="Center"/>
+                        <TextBox x:ConnectionId='5' x:Name="cIIc"
+                            Width="30"
+                              Margin="100,0,0,0"/>
+                        <TextBlock Text="zł" VerticalAlignment="Center" Margin="240,0,0,0"/>
+                    </Grid>
+                    <Grid>
+                        <TextBlock Text="Przesył 1kW energii" 
+                               VerticalAlignment="Center"/>
+                        <TextBox x:ConnectionId='4' x:Name="cIIp"
+                            Width="30"
+                              Margin="100,0,0,0"/>
+                        <TextBlock Text="zł" VerticalAlignment="Center" Margin="240,0,0,0"/>
+                    </Grid>
+                </StackPanel>
+            </StackPanel>
+        </RelativePanel>
+    </Grid>
+</Page>
+
